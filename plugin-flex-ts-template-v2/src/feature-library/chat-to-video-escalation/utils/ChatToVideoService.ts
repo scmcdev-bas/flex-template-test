@@ -12,7 +12,7 @@ export interface CompleteRoomReponse {
 
 class ChatToVideoService extends ApiService {
   generateUrl = (identity: string, roomName: string): string =>
-    `${this.serverlessProtocol}://${this.serverlessDomain}/features/chat-to-video-escalation/index.html?identity=${identity}&roomName=${roomName}`;
+  `${this.serverlessProtocol}://${this.serverlessDomain}/features/chat-to-video-escalation/index.html?identity=${identity}&roomName=${roomName}&openExternalBrowser=1`;
 
   generateVideoCode = async (taskSid: string): Promise<GenerateCodeReponse> => {
     return new Promise((resolve, reject) => {
