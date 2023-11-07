@@ -33,7 +33,7 @@ const SwitchToVideo: React.FunctionComponent<SwitchToVideoProps> = ({ task, conv
         return;
       }
 
-      const url = ChatToVideoService.generateUrl('Customer', response.roomName);
+      const url = ChatToVideoService.generateUrl('', response.roomName);
       console.log('chat-to-video-escalation: unique link created:', url);
 
       await Actions.invokeAction('SendMessage', {
